@@ -7,6 +7,8 @@ import java.util.*;
 
 public class StaffOperation {
 
+  private static int nextId = 7;
+
   Scanner sc = new Scanner(System.in);
   List<StaffMember> staff = Constant.staffMemberCollection();
   Validation v = new Validation();
@@ -17,7 +19,8 @@ public class StaffOperation {
 
   public void insertEm(String type) {
 
-    int auto_id = staff.getLast().getId() + 1;
+    //  int auto_id = staff.getLast().getId() + 1;
+    int auto_id = ++nextId;
 
     while (true) {
       try {
